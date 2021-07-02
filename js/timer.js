@@ -19,18 +19,18 @@ function timerOn(event) {
     
     if (seconds.value > 59) {
         seconds.value = 59;
-    } else if (seconds.value == '' || seconds.value < 0) {
+    } else if (seconds.value < 0) {
         seconds.value = 0;
     }
 
-    if (minutes.value < 0 || minutes.value == '') {
+    if (minutes.value < 0) {
         minutes.value = 0;
     }
 
     minutes = minutes.value;
     seconds = seconds.value;
 
-    if (minutes || seconds) {
+    if (minutes && seconds) {
         startBtn.disabled = true;
         stopBtn.disabled = false;
 
@@ -65,6 +65,6 @@ function timerOn(event) {
         });
 
     } else {
-        timerResult.innerHTML = formatError("Необходимо заполнить хотя бы одно поле!");
+        timerResult.innerHTML = formatError("Заполните оба поля!");
     }
 }
