@@ -23,7 +23,7 @@ function timerOn(event) {
         seconds.value = 0;
     }
 
-    if (minutes.value < 0) {
+    if (minutes.value < 0 || minutes.value == '') {
         minutes.value = 0;
     }
 
