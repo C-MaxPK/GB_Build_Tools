@@ -1,6 +1,6 @@
 'use strict';
 
-import { DateTime } from "luxon";
+import DateTime from "luxon/src/datetime";
 
 export function diffDates(firstDate, secondDate) {
     firstDate = DateTime.fromISO(firstDate);

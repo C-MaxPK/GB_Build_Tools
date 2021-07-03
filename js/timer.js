@@ -10,7 +10,7 @@ const startBtn = document.getElementById('start');
 const stopBtn = document.getElementById('stop');
 
 const sound = new Howl({
-    src: ['./timer.mp3']
+    src: ['timer.mp3']
 });
 
 startBtn.addEventListener("click", timerOn);
